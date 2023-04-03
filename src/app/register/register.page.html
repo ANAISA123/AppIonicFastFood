@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar align="center" color="warning">
+    <ion-title style="font-family: cursive;">Registrate </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true" style="font-family: cursive;" class="ion-padding">
+  <h3 align="center" style="font-weight: bold">Ingresa tus datos</h3>
+  <img
+    style="border-radius: 10%; margin: 10% 0% 5% 35%"
+    width="35%"
+    src="assets/comida.png"
+  />
+  <ion-list >
+    <ion-item fill="floating" style="font-family: cursive;">
+      <ion-label position="floating">
+        <ion-icon name="at-circle-outline"></ion-icon> Correo</ion-label
+      >
+      <ion-input
+        type="mail"
+        placeholder="Ingrese correo electronico"
+        required
+        [(ngModel)]="user.email"
+      >
+      </ion-input>
+    </ion-item>
+
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="key-outline"></ion-icon>
+        Contraseña
+      </ion-label>
+
+      <ion-input
+        type="password"
+        placeholder="Ingrese clave"
+        required
+        [(ngModel)]="user.password"
+      ></ion-input>
+    </ion-item>
+
+    <ion-button color="warning" style="margin: 10% 0 0 25%" (click)="register(user)">
+      Registrar
+    </ion-button>
+  </ion-list>
+</ion-content>

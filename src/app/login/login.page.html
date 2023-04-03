@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar style="font-family: cursive;" align="center" color="warning">
+    <ion-title>Login </ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" >
+ 
+  
+  <img
+    style=" margin: 10px 0px 5px 35%"
+    width="35%"
+    src="assets/restaurante.png"
+  />
+  <ion-list>
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="at-circle-outline"></ion-icon> Usuario</ion-label
+      >
+      <ion-input
+        type="text"
+        placeholder="Ingrese su usuario"
+        [(ngModel)]="user.email"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item fill="floating">
+      <ion-label position="floating">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        Clave
+      </ion-label>
+
+      <ion-input
+        type="password"
+        placeholder="Ingrese su contraseña"
+        [(ngModel)]="user.password"
+        required
+      ></ion-input>
+
+    </ion-item>
+
+    <ion-button color ="warning" style="margin: 10% 0 0 35%" (click)="Login(user)" >
+      Ingresar
+    </ion-button>
+
+  </ion-list>
+</ion-content>
